@@ -1,12 +1,11 @@
 package databaseengine
 
-import(
+import (
 	"fmt"
 	"net/http"
 )
 
-type Server struct{
-
+type Server struct {
 }
 
 func serveIndex(w http.ResponseWriter, r *http.Request) {
@@ -20,9 +19,11 @@ func (s Server) Run() error {
 	mux.HandleFunc("/", serveIndex)
 
 	srv := http.Server{
-		Addr: ":8080",
+		Addr:    ":8080",
 		Handler: mux,
 	}
 
 	return srv.ListenAndServe()
 }
+
+// yo
