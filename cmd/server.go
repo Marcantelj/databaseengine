@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/MarcantelJ/databaseengine"
+	"github.com/Marcantelj/databaseengine/pkg/databaseengine"
 )
 
 func main() {
@@ -11,6 +11,8 @@ func main() {
 }
 
 func run() error {
+	srv := databaseengine.Server{
+	}
 
-
+	return srv.Run()
 }
